@@ -1,0 +1,19 @@
+<app-header titulo="action sheet page"></app-header>
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>action-sheet</ion-title>
+  </ion-toolbar>
+</ion-header>
+ -->
+<ion-content>
+<ion-button shape="round" class="center" routerLink="/inicio">
+  inicio
+</ion-button>
+<div class="container">
+  <ion-button (click)="presentActionSheet()">Open</ion-button>
+  <code *ngIf="result"> {{ result }} </code>
+</div>
+</ion-content>

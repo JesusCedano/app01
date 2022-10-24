@@ -1,0 +1,35 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button shape="round" class="center" routerLink="/cards">
+    Cards
+  </ion-button><ion-list>
+  <ion-item *ngFor="let c of componentes"
+  [routerLink]="c.redirectTo" detail>
+    <ion-icon [name]="c.icon" ></ion-icon>
+    <ion-label>{{c.name}}</ion-label>
+  </ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input type="email" placeholder="email@domain.com"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Password</ion-label>
+    <ion-input type="password" ></ion-input>
+  </ion-item>
+</ion-list>
+<ion-list>
+  <ion-button color="secondary">Iniciar Sesión</ion-button>
+  <ion-button color="danger">Crear Cuenta</ion-button>
+</ion-list>
+</ion-content>
+
+
